@@ -87,9 +87,12 @@ section {
 
 .btn:hover {
   opacity: 0.9;
-
+  transform: scale(1.05);
 }
 
+.btn:active {
+  transform: scale(0.95);
+}
 
 p {
   font-size: 22px;
@@ -98,8 +101,8 @@ p {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 24px;
-  margin-top: 40px;
+  gap: 16px;
+  margin-top: 16px;
 }
 
 .card {
@@ -157,6 +160,12 @@ h2 {
   border-radius: 8px;
 }
 
+.card h2 {
+  font-size: 26px;
+}
+
+
+/* Skills Section Styles */
 #skills .grid {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
@@ -183,6 +192,13 @@ h2 {
   text-align: center;
 }
 
+/* Portfolio Section Styles */
+#portfolio .box-section-style {
+  background-color: var(--section);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 40px;
+}
 
 /* Contact Section Styles */
 .contact-section {
@@ -227,7 +243,9 @@ h2 {
   color: var(--primary);
 }
 
-
+.contact-card:active {
+  transform: translateY(-2px);
+}
 
 footer {
   text-align: center;

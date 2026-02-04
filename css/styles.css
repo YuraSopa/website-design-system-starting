@@ -51,7 +51,7 @@ nav a:hover {
 }
 
 section {
-  padding: 80px 40px;
+  padding: 60px 40px;
   max-width: 1200px;
   margin: auto;
 }
@@ -146,6 +146,7 @@ h2 {
   background-color: var(--section);
   border-radius: 16px;
   position: relative;
+  margin-bottom: 60px;
 }
 
 

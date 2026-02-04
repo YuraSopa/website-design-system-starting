@@ -40,10 +40,14 @@ nav a {
   text-decoration: none;
   color: var(--text);
   font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
   color: var(--primary);
+  background-color: var(--section);
 }
 
 section {
@@ -83,10 +87,11 @@ section {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  opacity: 0.9;
+  background: purple;
   transform: scale(1.05);
 }
 
@@ -110,10 +115,13 @@ p {
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  flex-direction: column;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 32px;
   text-align: center;
   margin-bottom: 20px;
   color: var(--primary);
@@ -178,13 +186,6 @@ h2 {
   color: var(--primary);
 }
 
-.section-title {
-  font-family: "Gloria Hallelujah", cursive;
-  font-size: 56px;
-  color: var(--primary);
-  margin-bottom: 16px;
-}
-
 .story-card {
   display: flex;
   flex-direction: column;
@@ -201,12 +202,12 @@ h2 {
 }
 
 /* Price Section Styles */
-.grid .card h2 {
+#pricing .grid .card h2 {
   font-size: 28px;
   color: var(--primary);
 }
 
-.grid .card h3 {
+#pricing .grid .card h3 {
   font-size: 26px;
   font-weight: 600;
   text-align: center;
@@ -217,12 +218,6 @@ h2 {
 .card ul {
   padding-left: 18px;
   margin-bottom: 24px;
-}
-
-.grid .card p{
-  font-size: 13px;
-  color: #888;
-  margin-bottom: 12px;
 }
 
 .card li {
@@ -247,9 +242,49 @@ h2 {
   vertical-align: middle;
 }
 
+.grid .card .for {
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.meta-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.result {
+  margin-top: 16px;
+  font-weight: 600;
+  color: #6c2bd9; 
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.card-price {
+  margin-top: auto;
+  font-weight: bold;
+  color: var(--primary);
+  text-align: center;
+}
+
 /* Contact Section Styles */
-.contact-section {
-  padding: 120px 40px;
+.contact-section h2 {
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 56px;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+#contact {
+  padding: 100px 40px;
   text-align: center;
 }
 

@@ -3,8 +3,13 @@
   --accent: #f5b7b1;
   --bg: #fbf7f4;
   --text: #2c3e50;
+  --text-light: #888888;
+  --text-dark: #222222;
+  --text-muted: #555555;
   --card: #ffffff;
   --section: #f3e9e7;
+  --highlight: #6c2bd9;
+  --footer-bg: #f2f3f4;
 }
 
 * {
@@ -91,7 +96,7 @@ section {
 }
 
 .btn:hover {
-  background: purple;
+  background: var(--highlight);
   transform: scale(1.05);
 }
 
@@ -173,6 +178,11 @@ h2 {
   font-size: 26px;
 }
 
+.intro-name {
+  font-weight: bold;
+  font-size: 32px;
+}
+
 
 /* Skills Section Styles */
 #skills .grid {
@@ -185,13 +195,22 @@ h2 {
   font-size: 100px;
   text-align: center;
   color: var(--primary);
+  margin-bottom: 0;
 }
+
+
 
 .story-card {
   display: flex;
   flex-direction: column;
   gap: 12px;
   text-align: center;
+}
+
+.story-card img,
+.story-card video {
+  width: 100%;
+  border-radius: 8px;
 }
 
 /* Portfolio Section Styles */
@@ -212,7 +231,7 @@ h2 {
   font-size: 26px;
   font-weight: 600;
   text-align: center;
-  color: #111;
+  color: var(--text-dark);
   margin-bottom: 12px;
 } 
 
@@ -224,12 +243,12 @@ h2 {
 .card li {
   font-size: 15px;
   line-height: 1.6;
-  color: #555;
+  color: var(--text-muted);
   margin-bottom: 8px;
 }
 
 .card li:nth-child(-n+3) {
-  color: #222;
+  color: var(--text-dark);
   font-weight: 500;
 }
 
@@ -245,7 +264,7 @@ h2 {
 
 .grid .card .for {
   font-size: 13px;
-  color: #888;
+  color: var(--text-light);
   font-style: italic;
   margin-bottom: 12px;
 }
@@ -253,14 +272,14 @@ h2 {
 .meta-title {
   font-size: 14px;
   font-weight: 600;
-  color: #777;
+  color: var(--text-light);
   margin-bottom: 12px;
 }
 
 .result {
   margin-top: 16px;
   font-weight: 600;
-  color: #6c2bd9; 
+  color: var(--highlight);
   font-size: 14px;
   margin-bottom: 24px;
 }
@@ -277,9 +296,9 @@ h2 {
 }
 
 /* Contact Section Styles */
-.contact-section h2 {
+#contact h2 {
   font-family: "Gloria Hallelujah", cursive;
-  font-size: 56px;
+  font-size: 50px;
   color: var(--primary);
   margin-bottom: 16px;
 }
@@ -333,5 +352,87 @@ h2 {
 footer {
   text-align: center;
   padding: 40px;
-  background: #f2f3f4;
+  background: var(--footer-bg);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+  }
+
+  .hero {
+    height: 400px;
+    padding-top: 80px;
+    margin-top: 60px;
+    background-size: 70%;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  #skills .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .about-row {
+    flex-direction: column;
+  }
+
+  .about-row img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  nav a {
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .hero {
+    height: 300px;
+    background-size: 100%;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  #skills .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
 } 

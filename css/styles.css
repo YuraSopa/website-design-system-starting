@@ -221,6 +221,11 @@ h2 {
   margin-bottom: 40px;
 }
 
+.storytelling-grid {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
 /* Price Section Styles */
 #pricing .grid .card h2 {
   font-size: 28px;
@@ -356,6 +361,7 @@ footer {
 }
 
 
+
 /* Responsive Design */
 @media (max-width: 768px) {
   section {
@@ -396,6 +402,8 @@ footer {
   }
 }
 
+
+
 @media (max-width: 480px) {
   header {
     padding: 15px 10px;
@@ -409,22 +417,36 @@ footer {
 
   .hero {
     height: 300px;
-    background-size: 100%;
+    background-size: 62%;
+    background-position: bottom left;
   }
 
   .hero h1 {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .hero p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   #skills .grid {
     grid-template-columns: 1fr;
   }
 
+  .visual-designs .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .storytelling-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
   .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  #pricing .grid{
     grid-template-columns: 1fr;
   }
 
@@ -435,4 +457,5 @@ footer {
   p {
     font-size: 16px;
   }
+  
 } 
